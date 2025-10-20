@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environmental Sustainability - Global Interdependence</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html">Global Interdependence</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+           <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="economy.html">Economy</a></li>
+          <li class="nav-item"><a class="nav-link" href="cybersecurity.html">Cybersecurity</a></li>
+          <li class="nav-item"><a class="nav-link" href="health.html">Health</a></li>
+          <li class="nav-item"><a class="nav-link" href="environment.html">Environment</a></li>
+          <li class="nav-item"><a class="nav-link" href="communications.html">Communications</a></li>
+          <li class="nav-item"><a class="nav-link" href="ai.html">AI & Global Impact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="food.html">Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+<header class="hero-section text-center text-white py-5" style="background: linear-gradient(135deg, #2a9d8f, #264653); margin-top: 56px;">
+  <div class="container py-5">
+    <h1 class="display-5 fw-bold fade-in">Environment</h1>
+    <p class="lead fade-in mt-3">Protecting our planet through shared responsibility and sustainable innovation.</p>
+  </div>
+</header>
+
+  <!-- Main Content -->
+  <main class="container py-5">
+    <section class="scroll-fade">
+      <h2>Understanding the Global Environmental Challenge</h2>
+      <p>
+        The world’s ecosystems are bound together through a delicate balance of biodiversity, atmospheric conditions, and oceanic circulation. Environmental sustainability requires global collaboration, as the impacts of pollution, deforestation, and climate change transcend national borders. 
+        A single industrial decision in one region can affect rainfall patterns or ocean temperatures in another, highlighting the critical importance of international environmental policies and cooperation.
+      </p>
+      <p>
+        Initiatives such as the <strong>Paris Climate Agreement</strong> and the <strong>United Nations Sustainable Development Goals (SDGs)</strong> represent unified efforts toward combating climate change and preserving biodiversity. Yet, their success depends on participation from every country, organization, and individual consumer. 
+        Global interdependence means that no one can thrive unless the planet thrives—economies, health, and food systems all rely on environmental stability.
+      </p>
+    </section>
+
+    <section class="scroll-fade">
+      <h2>Green Technology and International Solutions</h2>
+      <p>
+        The modern environmental movement is being shaped by innovation in renewable energy, sustainable agriculture, and artificial intelligence. Countries are investing in wind, solar, and hydroelectric technologies to reduce carbon footprints while maintaining energy security. 
+        Meanwhile, corporations are exploring circular economy models to minimize waste, and environmental monitoring satellites provide real-time data on global ecosystems.
+      </p>
+      <p>
+        Cross-border collaboration has become essential in developing these technologies. The exchange of knowledge and the joint pursuit of cleaner industry standards show that environmental stewardship is both a moral responsibility and a shared global necessity.
+      </p>
+    </section>
+
+    <!-- Environmental Data Visualization -->
+    <section class="text-center scroll-fade">
+      <h2>Global CO₂ Emissions by Sector</h2>
+      <canvas id="emissionChart" width="400" height="200"></canvas>
+    </section>
+
+<!-- Media Section -->
+<section class="scroll-fade mt-5">
+  <h2>Media Spotlight: The Planet in Motion</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <div class="ratio ratio-16x9 rounded shadow">
+        <iframe 
+          src="https://www.youtube.com/embed/BPL4Wtg2nzI" 
+          title="The Planet in Motion" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <p>
+        Watch this powerful documentary exploring how human activity influences Earth’s ecosystems and climate systems. 
+        This film provides a clear look at how interconnected our environmental, economic, and social systems truly are.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    
+  </main>
+
+<footer class="bg-primary text-white text-center py-4 mt-5">
+  <p>© 2025 Mullen Independence Project | Global Awareness Initiative</p>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+  <script>
+    // Chart.js Visualization
+    const ctx = document.getElementById('emissionChart');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Energy', 'Transportation', 'Agriculture', 'Industry', 'Waste'],
+          datasets: [{
+            data: [44, 24, 14, 12, 6],
+            backgroundColor: ['#0077b6', '#00b4d8', '#ffd166', '#06d6a0', '#ff6b6b'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { color: '#333', font: { size: 14 } }
+            }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
